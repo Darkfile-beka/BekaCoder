@@ -1,0 +1,134 @@
+/* scrollbar */
+::-webkit-scrollbar-track
+{
+	background-color:  var(--bd-black-900);
+}
+::-webkit-scrollbar
+{
+	width: 10px;
+	background-color: var(--bd-black-900);
+}
+::-webkit-scrollbar-thumb
+{
+	background-color: var(--text-black-900);
+    border-radius: 30px;
+}
+
+.style-switcher{
+    position: fixed;
+    right: 0;
+    top: 60px;
+    padding: 15px;
+    width: 220px;
+    border: 1px solid var(--bd-black-50);
+    background: var(--bd-black-100);
+    z-index: 101;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    transform: translateX(100%);
+}
+.style-switcher.open{
+    transform: translateX(-25px);
+}
+.style-switcher .s-icon{
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    text-align: center;
+    font-size: 20px;
+    background: var(--bd-black-100);
+    color: var(--text-black-900);
+    right: 100%;
+    border: 1px solid var(--bd-black-50);
+    margin-right: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 50%;
+}
+.style-switcher .s-icon i {
+    line-height: 40px;
+
+}
+
+.style-switcher .style-switcher-toggle{
+    top: 0;
+
+}
+.style-switcher .day-night {
+    top: 55px;
+}
+.icon-1{
+    -webkit-animation: animate 1s linear infinite;
+    -moz-animation: animate 1s linear infinite;
+    animation: animate 1s linear infinite;
+}
+@-webkit-keyframes animate{
+    100%{
+        -webkit-transform: rotate(360deg);
+    }
+}
+@-moz-keyframes animate{
+    100%{
+        -webkit-transform: rotate(360deg);
+    }
+}
+@keyframes animate{
+    100%{
+        -webkit-transform: rotate(360deg);
+    }
+}
+.style-switcher h4 {
+    margin: 0 0 10px;
+    color: var(--text-black-900);
+font-size: 16px;
+font-weight: 600;
+text-transform: capitalize;
+}
+.style-switcher .colors{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.style-switcher .colors span {
+    display: inline-block;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    border: 1px solid red;
+    border: none;
+}
+.style-switcher .color-1 {
+    background-color: #ec1839;
+}
+.style-switcher .color-2 {
+    background-color: rgb(0, 188, 180);
+}
+.style-switcher .color-3 {
+    background-color: rgb(143, 52, 129);
+}
+.style-switcher .color-4 {
+    background-color: #4675C0;
+}
+.style-switcher .color-5 {
+    background-color: rgb(205, 110, 54);
+}
+/* text animate */
+.typing-demo {
+    width: 10ch;
+    animation: typing 2s steps(10), blink .5s step-end infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 2px solid;
+  }
+  
+  @keyframes typing {
+    from {
+      width: 0
+    }
+  }
+      
+  @keyframes blink {
+    50% {
+      border-color: transparent
+    }
+  }
